@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+</head>
+
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<script>
+var canvas, canvasContext;
+
+window.onload = function() {
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0, canvas.width, canvas.height);
+
+	canvasContext.fillStyle = 'white';
+	canvasContext.beginPath();
+	canvasContext.arc(100,100, 10, 0,Math.PI*2, true);
+	canvasContext.fill();
+}
+
+</script>
+
+</body>
+</html>
